@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://8r4iil3pnmr1"]
+[gd_scene load_steps=8 format=3 uid="uid://8r4iil3pnmr1"]
 
 [ext_resource type="ArrayMesh" uid="uid://42ai1gbavtl5" path="res://Models/Terrain.obj" id="1_pnt12"]
+[ext_resource type="Script" path="res://players.gd" id="2_vyx01"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8oyqh"]
 albedo_color = Color(0.254902, 0.670588, 0.207843, 1)
@@ -30,6 +31,7 @@ shape = SubResource("ConcavePolygonShape3D_kqv7w")
 
 [node name="Players" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32081, 0)
+script = ExtResource("2_vyx01")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Players"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
