@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3hccut7tedly"]
+
+[ext_resource type="Script" path="res://need_bar.gd" id="1_xuf3j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr3ch"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo6ku"]
+bg_color = Color(0.775058, 0.183966, 0.0629022, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lcmxa"]
+font_size = 20
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="NeedUIBar" type="ProgressBar"]
+custom_minimum_size = Vector2(300, 45)
+offset_right = 300.0
+offset_bottom = 45.0
+theme_override_styles/background = SubResource("StyleBoxFlat_cr3ch")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uo6ku")
+value = 50.0
+show_percentage = false
+script = ExtResource("1_xuf3j")
+
+[node name="NeedLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 45.0
+text = "Health: 100/100"
+label_settings = SubResource("LabelSettings_lcmxa")
+horizontal_alignment = 1
+vertical_alignment = 1
